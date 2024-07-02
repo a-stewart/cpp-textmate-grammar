@@ -2552,7 +2552,7 @@ grammar = Grammar.new(
 #
     grammar[:square_brackets] = LegacyPattern.new({
         name: "meta.bracket.square.access",
-        begin: "([a-zA-Z_][a-zA-Z_0-9]*|(?<=[\\]\\)]))?(\\[)(?!\\])",
+        begin: "([a-zA-Z_][a-zA-Z_0-9]*|(?<=[\\]\\)]))?\\s*(\\[)(?!\\])",
         beginCaptures: {
             "1" => {
                 name: "variable.other.object"
